@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<link>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Название книги</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css"/>
+    <link rel="stylesheet" href="css/layout.css"/>
+    <link rel="stylesheet" href="css/page_of_book.css"/>
+    <script src="javascript/page_of_book.js" defer></script>
+</head>
+<body>
+    <header id="header">
+        <div class="header container-fluid d-flex ">
+            <div class="container">
+                <div class="row d-flex align-items-center ">
+                    <nav class="d-flex align-items-center col-4">
+                        <img src="img/Star 1.svg" class="logo-img">
+                        <a href="#" class="logo"><b>AboutBooooks</b></a>
+                    </nav>
+                    <nav class="d-flex align-items-center col-2 offset-6">
+                        <a href="#">
+                        <img src="img/person-bounding-box.svg" class="profile-img">
+                        </a>    
+                        <a href="enter_or_registration.html" class="my-profile"><b>Мой профиль</b></a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container-fluid page_of_book">
+        <div class="container d-flex align-items-center">
+            <div class="frame col-4">
+                <img class="catalog_img" src="img/fate_of_human.jpg">
+                <p class="catalog_author">М.А.Шолохов</p>
+                <p class="catalog_bookname"><b>Судьба человека</b></p>
+                <p class="book_year">1956 год</p>
+            </div>
+            <div class="discription col-8">
+                <p class="synopsis">Синопсис книги</p>
+                <p class="synopsis_text">Рассказ Михаила Шолохова «Судьба человека» повествует о жизни солдата Великой Отечественной Войны Андрея Соколова. Нагрянувшая война отняла у мужчины всё: семью, дом, веру в светлое будущее. Волевой характер и твёрдость духа не позволили сломиться Андрею. Встреча с осиротевшим мальчиком Ванюшкой привнесла в жизнь Соколова новый смысл.</p>
+                <p class="fragment">Фрагмент из книги</p>                   
+                <p class="fragmet_text">Из рейса, бывало, вернешься в город — понятно, первым делом в чайную: перехватить чего-нибудь, ну, конечно, и сто грамм выпить с устатка. К этому вредному делу, надо сказать, я уже пристрастился как следует… И вот один раз вижу возле чайной этого парнишку, на другой день — опять вижу. Этакий маленький оборвыш: личико все в арбузном соку, покрытом пылью, грязный, как прах, нечесаный, а глазенки — как звездочки ночью после дождя! И до того он мне полюбился, что я уже, чудное дело, начал скучать по нем, спешу из рейса поскорее его увидать. Около чайной он и кормился — кто что даст.
+                    На четвертый день прямо из совхоза, груженный хлебом, подворачиваю к чайной. Парнишка мой там сидит на крыльце, ножонками болтает и, по всему видать, голодный. Высунулся я в окошко, кричу ему: «Эй, Ванюшка! Садись скорее на машину, прокачу на элеватор, а оттуда вернемся сюда, пообедаем». Он от моего окрика вздрогнул, соскочил с крыльца, на подножку вскарабкался и тихо так говорит: «А вы откуда знаете, дядя, что меня Ваней зовут?» И глазенки широко раскрыл, ждет, что я ему отвечу. Ну, я ему говорю, что я, мол, человек бывалый и все знаю.</p>
+            </div>
+        </div>
+        <div class="container block_of_rewiews">
+            <div class="reviews-container">
+                <h2>Оставьте свою рецензию</h2>
+                <form id="review-form" class="justify-content-between d-flex">
+                    <textarea name="review" placeholder="Напишите вашу рецензию" class="text_of_rewiews col-11" required></textarea><br>
+                    <button type="submit" class="reviews-button">Отправить</button>
+                </form>
+                <h2>Все рецензии</h2>
+            </div>
+        
+            <div class="reviews-container reviews-box" id="reviews-list">
+                <!-- Здесь будут отображаться отзывы -->
+            </div>
+        </div>
+    </main>
+
+    <footer class="container-fluid">
+        <div class="container">
+            <div class="row align-items-center">
+                <figure class="logo-figure col-4">
+                    <a href="#header">
+                        <img src="img/Star 1.svg" alt="">   
+                        <a href="#" class="logo_footer"><b>AboutBooooks</b></a>
+                    </a>
+                    <figcaption class="telephone">+7-987-654-3210</figcaption>
+                    <figcaption class="advertisement">Реклама на сайте</figcaption>
+                </figure>
+                <nav class="most-genre col-4" style="display: flex; flex-direction: column; align-items: center;">
+                    <a href="#" class="genre-title">Наиболее популярные жанры книг из каталога:</a>
+                    <a href="#" class="fantasy-footer d-block">Фентези</a>
+                    <a href="#" class="romans-footer d-block">Романы</a>
+                    <a href="#" class="dramas-footer d-block">Драмы</a>
+                </nav>
+                <nav class="social-network col-3 offset-1 d-flex justify-content-end align-items-center">
+                    <a href="#">
+                        <img src="img/facebook.svg" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="img/instagram.svg" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="img/youtube.svg" alt="">
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

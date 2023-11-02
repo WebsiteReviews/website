@@ -1,0 +1,73 @@
+body{
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+a{
+    text-decoration: none;
+}
+
+h1,h2,h3,h4,h5,h6{
+    padding: 0;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+header .header{
+    background-color: #E1EDE6 ;
+    border-bottom:1px solid #adecc7;
+}
+
+ .logo-img{
+    max-width: 100px;
+    height: 100px;
+    padding-top:5px;
+    padding-bottom: 5px;
+
+}
+.logo{
+    font-size: 40px;
+    color: #598D66;
+    padding-left:8px;
+}
+.profile-img{
+    width:25px;
+    height: auto;
+}
+.my-profile{
+    padding-left:7px;
+    color: #2C2D35;
+}
+
+.logo_footer{
+    color: #598D66;
+}
+
+footer{
+    background-color: #E1EDE6;
+    padding: 0;
+}
+
+footer .logo-figure a{
+    scroll-behavior: smooth;
+}
+.logo-figure{
+    padding-top: 10px;
+}
+
+.telephone,.genre-title{
+    color:#2C2D35;
+}
+
+.advertisement{
+    color:#86928B;
+}
+
+.fantasy-footer, .romans-footer, .dramas-footer{
+    color:#86928B;
+}
+
+.social-network{
+    gap:30px;
+}

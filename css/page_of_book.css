@@ -1,0 +1,87 @@
+.frame{
+    width: 350px;
+    height: 600px;
+    background-color: #E1EDE6;
+}
+
+.catalog_img{
+    width: 310px;
+    height: 422px;
+    margin-top: 20px;
+    margin-left:20px;
+}
+
+.catalog_author{
+    font-size:18px;
+    color:#86928B;
+    margin-left:20px;
+    margin-top: 10px;
+}
+
+.catalog_bookname{
+    margin-left:20px;
+    font-size:30px;
+    margin-top: 10px;
+    color:#2C2D35;
+}
+
+.book_year{
+    margin-left:20px;
+    font-size:18px;
+    margin-top: 5px;
+    color:#2C2D35;
+}
+
+.page_of_book{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.discription{
+    margin-left:30px;
+}
+
+.synopsis, .fragment{
+    font-size:30px;
+}
+
+
+.reviews-container {
+    text-align: left;
+    width: 100%;
+}
+
+.review {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    word-wrap: break-word;
+}
+
+textarea, input {
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px 20px;
+    margin-left:10px;
+    background-color: #598D66;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.reviews-box {
+    border: 2px solid #E1EDE6;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.block_of_rewiews h2{
+    margin-top:60px;
+    margin-bottom: 15px;
+}

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AboutBooooks</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css"/>
+    <link rel="stylesheet" href="css/layout.css"/>
+    <link rel="stylesheet" href="css/responsive/layout.css" type="text/css">
+    <link rel="stylesheet" href="css/main_page.css" type="text/css">
+    <script src="javascript/main_page.js" defer></script>
+</head>
+<body>
+    <header id="header">
+        <div class="header container-fluid d-flex ">
+            <div class="container">
+                <div class="row d-flex align-items-center ">
+                    <nav class="d-flex align-items-center col-4">
+                        <img src="img/Star 1.svg" class="logo-img">
+                        <a href="#" class="logo"><b>AboutBooooks</b></a>
+                    </nav>
+                    <nav class="d-flex align-items-center col-2 offset-6">
+                        <a href="#">
+                        <img src="img/person-bounding-box.svg" class="profile-img">
+                        </a>    
+                        <a href="enter_or_registration.html" class="my-profile"><b>Мой профиль</b></a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <main class="container-fluid">
+        <div class="container">
+
+            <section class="page_upper row align-items-center">
+                <img src="img/224-1.png" alt="" class="entry_img col-6">
+                <nav class="entry_text_button col-6">
+                    <p class="entry_text_1"><b>Книги - это не просто слова на бумаге, а волшебные миры, которые раскрываются перед нами с каждой оборотной.</b></p>
+                    <p class="entry_text_2">Добро пожаловать на <b><span style="color: #598D66;">AboutBooooks</span></b>, где каждая рецензия - это путеводитель в увлекательные истории, море эмоций и неизведанных приключений!</p>
+                    <button class="entry_button" onclick="goToPage('#')">
+                        Перейти к каталогу
+                    </button>
+                </nav>
+            </section>
+
+            <section class="page_middle row">
+                <div>
+                    <p style="font-size: 40px;color:#2C2D35;"><b>Стоит прочесть и оставить свою рецензию</b></p>
+                </div>
+                <div class="middle_page_catalog">
+                    <div class="first_row col-12 row justify-content-between">
+                        <div class="frame col-4">
+                            <img class="catalog_img" src="img/fate_of_human.jpg">
+                            <p class="catalog_author">М.А.Шолохов</p>
+                            <p class="catalog_bookname"><b>Судьба человека</b></p>
+                            <p class="book_year">1956 год</p>
+                            <button class="catalog_button" onclick="goToPage('page_of_book.html')">
+                                Перейти к книге
+                            </button>
+                        </div>
+                        <div class="frame col-4">
+                            <img class="catalog_img" src="img/breathe_of_scandal.jpg">
+                            <p class="catalog_author">Элизабет Эссекс</p>
+                            <p class="catalog_bookname"><b>Дыхание скандала</b></p>
+                            <p class="book_year">2014 год</p>
+                            <button class="catalog_button" onclick="goToPage('#')">
+                                Перейти к книге
+                            </button>
+                        </div>
+                        <div class="frame col-4">
+                            <img class="catalog_img" src="img/dungeon_island.jpg">
+                            <p class="catalog_author">Роберт Стивенсон</p>
+                            <p class="catalog_bookname"><b>Остров сокровищ</b></p>
+                            <p class="book_year">1883 год</p>
+                            <button class="catalog_button" onclick="goToPage('#')">
+                                Перейти к книге
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="second_row col-12 row justify-content-between">
+                        <div class="frame col-4">
+                            <img class="catalog_img" src="img/davies_adventure.jpg">
+                            <p class="catalog_author">Александр Дюма</p>
+                            <p class="catalog_bookname" style="font-size:23px;"><b>Приключения Джона Девиса</b></p>
+                            <p class="book_year">2016 год</p>
+                            <button class="catalog_button" onclick="goToPage('#')">
+                                Перейти к книге
+                            </button>
+                        </div>
+                        <div class="frame col-4">
+                            <img class="catalog_img" src="img/witcher.jpg">
+                            <p class="catalog_author">Анджей Сапковский</p>
+                            <p class="catalog_bookname"><b>Ведьмак</b></p>
+                            <p class="book_year">1956 год</p>
+                            <button class="catalog_button" onclick="goToPage('#')">
+                                Перейти к книге
+                            </button>
+                        </div>
+                        <div class="frame col-4">
+                            <img class="catalog_img" src="img/war_and_piece.jpg">
+                            <p class="catalog_author">Л.Н.Толстой</p>
+                            <p class="catalog_bookname"><b>Война и мир</b></p>
+                            <p class="book_year">1869 год</p>
+                            <button class="catalog_button" onclick="goToPage('#')">
+                                Перейти к книге
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+    </main>
+
+    
+    <footer class="container-fluid">
+        <div class="container">
+            <div class="row align-items-center">
+                <figure class="logo-figure col-4">
+                    <a href="#header">
+                        <img src="img/Star 1.svg" alt="">   
+                        <a href="#" class="logo_footer"><b>AboutBooooks</b></a>
+                    </a>
+                    <figcaption class="telephone">+7-987-654-3210</figcaption>
+                    <figcaption class="advertisement">Реклама на сайте</figcaption>
+                </figure>
+                <nav class="most-genre col-4" style="display: flex; flex-direction: column; align-items: center;">
+                    <a href="#" class="genre-title">Наиболее популярные жанры книг из каталога:</a>
+                    <a href="#" class="fantasy-footer d-block">Фентези</a>
+                    <a href="#" class="romans-footer d-block">Романы</a>
+                    <a href="#" class="dramas-footer d-block">Драмы</a>
+                </nav>
+                <nav class="social-network col-3 offset-1 d-flex justify-content-end align-items-center">
+                    <a href="#">
+                        <img src="img/facebook.svg" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="img/instagram.svg" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="img/youtube.svg" alt="">
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
+

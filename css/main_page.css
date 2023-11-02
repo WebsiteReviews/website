@@ -1,0 +1,81 @@
+.entry_text_1{
+    font-size: 2.5em;
+    padding-bottom: 20px;
+    color: #2C2D35;
+}
+
+.entry_text_2{
+    font-size: 28px;
+    padding-bottom: 20px;
+    color:#2C2D35;
+}
+
+.entry_button{
+    display: inline-block;
+    color:#598D66;
+    background-color: #E1EDE6 ;
+    border-color: #86b090;
+    width: 225px;
+    height: 65px;
+    cursor: pointer;
+}
+
+.entry_button:hover{
+    opacity: .8;
+}
+
+.entry_button:focus{
+    outline: none;
+    opacity: .8;
+}
+
+.frame{
+    width: 350px;
+    height: 680px;
+    background-color: #E1EDE6;
+}
+
+.catalog_img{
+    width: 310px;
+    height: 422px;
+    margin-top: 20px;
+    margin-left:10px;
+}
+.catalog_author{
+    font-size:18px;
+    color:#86928B;
+    margin-left:10px;
+    margin-top: 10px;
+}
+.catalog_bookname{
+    margin-left:10px;
+    font-size:30px;
+    margin-top: 10px;
+    color:#2C2D35;
+}
+
+.book_year{
+    margin-left:10px;
+    font-size:18px;
+    margin-top: 5px;
+    color:#2C2D35;
+}
+
+.catalog_button{
+    display: inline-block;
+    color:#598D66;
+    background-color: #E1EDE6 ;
+    border-color: #86b090;
+    width: 310px;
+    height: 65px;
+    cursor: pointer;
+}
+
+.second_row{
+    margin-top: 30px;
+}
+
+.page_middle{
+    padding-top:100px;
+    padding-bottom: 50px;
+}

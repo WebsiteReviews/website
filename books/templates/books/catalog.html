@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/bootstrap.css" type="text/css"/>
+    <link rel="stylesheet" href="/static/css/layout.css"/>
+    <link rel="stylesheet" href="/static/css/catalog.css"/>
+    <script src="/static/javascript/catalog.js" defer></script>
+</head>
+<body>
+    <header id="header">
+        <div class="header container-fluid d-flex ">
+            <div class="container">
+                <div class="row d-flex align-items-center ">
+                    <nav class="d-flex align-items-center col-4">
+                        <img src="/static/img/Star 1.svg" class="logo-img">
+                        <a href="#" class="logo"><b>AboutBooooks</b></a>
+                    </nav>
+                    <nav class="d-flex align-items-center col-2 offset-6">
+                        <a href="#">
+                        <img src="/static/img/person-bounding-box.svg" class="profile-img">
+                        </a>
+                        <a href="enter_or_registration.html" class="my-profile"><b>Мой профиль</b></a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container-fluid">
+        <div class="container">
+            <nav class="to-filter d-flex justify-content-center">
+                <ul>
+                    <li data-f="all">Все</li>
+                    {% for genre in genres%}
+                        <li data-f="{{ genre.name_in_english }}" class="text-{{ genre.name_in_english }}">{{ genre.name }}</li>
+                    {% endfor %}
+                </ul>
+            </nav>
+            <div class="block-cover flex-wrap d-flex justify-content-center" id="bookContainer">
+
+                <div class="col-auto box dramas fade-in">
+                    <div class="frame col-4">
+                        <img class="catalog_img" src="/static/img/fate_of_human.jpg">
+                        <p class="catalog_author">М.А.Шолохов</p>
+                        <p class="catalog_bookname"><b>Судьба человека</b></p>
+                        <p class="book_year">1956 год</p>
+                        <button class="catalog_button" onclick="goToPage('page_of_book.html')">
+                            Перейти к книге
+                        </button>
+                    </div>
+                </div>
+
+                <div class="col-auto box romans">
+                    <div class="frame col-4">
+                        <img class="catalog_img" src="/static/img/breathe_of_scandal.jpg">
+                        <p class="catalog_author">Элизабет Эссекс</p>
+                        <p class="catalog_bookname"><b>Дыхание скандала</b></p>
+                        <p class="book_year">2014 год</p>
+                        <button class="catalog_button" onclick="goToPage('#')">
+                            Перейти к книге
+                        </button>
+                    </div>
+                </div>
+
+                <div class="col-auto box fantasy">
+                    <div class="frame col-4">
+                        <img class="catalog_img" src="/static/img/witcher.jpg">
+                        <p class="catalog_author">Анджей Сапковский</p>
+                        <p class="catalog_bookname"><b>Ведьмак</b></p>
+                        <p class="book_year">1956 год</p>
+                        <button class="catalog_button" onclick="goToPage('#')">
+                            Перейти к книге
+                        </button>
+                    </div>
+                </div>
+
+                <div class="col-auto box adventures">
+                    <div class="frame col-4">
+                        <img class="catalog_img" src="/static/img/dungeon_island.jpg">
+                        <p class="catalog_author">Роберт Стивенсон</p>
+                        <p class="catalog_bookname"><b>Остров сокровищ</b></p>
+                        <p class="book_year">1883 год</p>
+                        <button class="catalog_button" onclick="goToPage('#')">
+                            Перейти к книге
+                        </button>
+                    </div>
+                </div>
+
+                <div class="col-auto box science">
+                    <div class="frame col-4">
+                        <img class="catalog_img" src="/static/img/dungeon_island.jpg">
+                        <p class="catalog_author">Роберт Стивенсон</p>
+                        <p class="catalog_bookname"><b>Остров сокровищ</b></p>
+                        <p class="book_year">1883 год</p>
+                        <button class="catalog_button" onclick="goToPage('#')">
+                            Перейти к книге
+                        </button>
+                    </div>
+                </div>
+
+                <div class="col-auto box science">
+                    <div class="frame col-4">
+                        <img class="catalog_img" src="/static/img/dungeon_island.jpg">
+                        <p class="catalog_author">Роберт Стивенсон</p>
+                        <p class="catalog_bookname"><b>Остров сокровищ</b></p>
+                        <p class="book_year">1883 год</p>
+                        <button class="catalog_button" onclick="goToPage('#')">
+                            Перейти к книге
+                        </button>
+                    </div>
+                </div>
+
+                <div class="col-auto box science">
+                    <div class="frame col-4">
+                        <img class="catalog_img" src="/static/img/dungeon_island.jpg">
+                        <p class="catalog_author">Роберт Стивенсон</p>
+                        <p class="catalog_bookname"><b>Остров сокровищ</b></p>
+                        <p class="book_year">1883 год</p>
+                        <button class="catalog_button" onclick="goToPage('#')">
+                            Перейти к книге
+                        </button>
+                    </div>
+                </div>
+
+                <div class="col-auto box science">
+                    <div class="frame col-4">
+                        <img class="catalog_img" src="/static/img/dungeon_island.jpg">
+                        <p class="catalog_author">Роберт Стивенсон</p>
+                        <p class="catalog_bookname"><b>Остров сокровищ</b></p>
+                        <p class="book_year">1883 год</p>
+                        <button class="catalog_button" onclick="goToPage('#')">
+                            Перейти к книге
+                        </button>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="container-fluid">
+        <div class="container">
+            <div class="row align-items-center">
+                <figure class="logo-figure col-4">
+                    <a href="#header">
+                        <img src="/static/img/Star 1.svg" alt="">
+                        <a href="#" class="logo_footer"><b>AboutBooooks</b></a>
+                    </a>
+                    <figcaption class="telephone">+7-987-654-3210</figcaption>
+                    <figcaption class="advertisement">Реклама на сайте</figcaption>
+                </figure>
+                <nav class="most-genre col-4" style="display: flex; flex-direction: column; align-items: center;">
+                    <a href="#" class="genre-title">Наиболее популярные жанры книг из каталога:</a>
+                    <a href="#" class="fantasy-footer d-block">Фентези</a>
+                    <a href="#" class="romans-footer d-block">Романы</a>
+                    <a href="#" class="dramas-footer d-block">Драмы</a>
+                </nav>
+                <nav class="social-network col-3 offset-1 d-flex justify-content-end align-items-center">
+                    <a href="#">
+                        <img src="/static/img/facebook.svg" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="/static/img/instagram.svg" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="/static/img/youtube.svg" alt="">
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/static/javascript/catalog.js" defer></script>
+</body>
+</html>

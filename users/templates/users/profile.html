@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/bootstrap.css" type="text/css"/>
+    <link rel="stylesheet" href="/static/css/layout.css"/>
+    <link rel="stylesheet" href="/static/css/user_profile.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"></script>
+</head>
+<body>
+    <header id="header">
+        <div class="header container-fluid d-flex ">
+            <div class="container">
+                <div class="row d-flex align-items-center ">
+                    <nav class="d-flex align-items-center col-4">
+                        <img src="/static/img/Star 1.svg" class="logo-img">
+                        <a href="#" class="logo"><b>AboutBooooks</b></a>
+                    </nav>
+                    <nav class="d-flex align-items-center col-2 offset-6">
+                        <a href="#">
+                        <img src="/static/img/person-bounding-box.svg" class="profile-img">
+                        </a>
+                        <a href="{% url 'users:profile' %}" class="my-profile"><b>Мой профиль</b></a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <main class="user_profile container-fluid">
+        <div class="container mt-3">
+            <div class="card p-3 text-center">
+                <h4>Изменить профиль</h4>
+                <form action="{% url 'users:profile' %}" method="post">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="inputs">
+                                <label>Ваше имя</label>
+                                {{ form.first_name }}
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="inputs">
+                                <label>Email</label>
+                                {{ form.email }}
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="inputs">
+                                <label>Ваш город</label>
+                                {{ form.user_city }}
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="inputs">
+                                <label>Ваша страна</label>
+                                {{ form.user_country }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="about-inputs">
+                                <label>Расскажите о себе</label>
+                                {{ form.about_user }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-3 gap-2 d-flex justify-content-end"> <button class="px-3 btn btn-sm btn-outline-primary">Отмена</button> <button class="px-3 btn btn-sm btn-primary">Сохранить</button> </div>
+
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+
+    <footer class="container-fluid">
+        <div class="container">
+            <div class="row align-items-center">
+                <figure class="logo-figure col-4">
+                    <a href="#header">
+                        <img src="/static/img/Star 1.svg" alt="">
+                        <a href="#" class="logo_footer"><b>AboutBooooks</b></a>
+                    </a>
+                    <figcaption class="telephone">+7-987-654-3210</figcaption>
+                    <figcaption class="advertisement">Реклама на сайте</figcaption>
+                </figure>
+                <nav class="most-genre col-4" style="display: flex; flex-direction: column; align-items: center;">
+                    <a href="#" class="genre-title">Наиболее популярные жанры книг из каталога:</a>
+                    <a href="#" class="fantasy-footer d-block">Фентези</a>
+                    <a href="#" class="romans-footer d-block">Романы</a>
+                    <a href="#" class="dramas-footer d-block">Драмы</a>
+                </nav>
+                <nav class="social-network col-3 offset-1 d-flex justify-content-end align-items-center">
+                    <a href="#">
+                        <img src="/static/img/facebook.svg" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="/static/img/instagram.svg" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="/static/img/youtube.svg" alt="">
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -17,7 +17,7 @@
                 <div class="row d-flex align-items-center ">
                     <nav class="d-flex align-items-center col-4">
                         <img src="/static/img/Star 1.svg" class="logo-img">
-                        <a href="#" class="logo"><b>AboutBooooks</b></a>
+                        <a href="{% url 'main' %}" class="logo"><b>AboutBooooks</b></a>
                     </nav>
                     <nav class="d-flex align-items-center col-2 offset-6">
                         <a href="#">
@@ -34,13 +34,30 @@
         <div class="container">
             <nav class="to-filter d-flex justify-content-center">
                 <ul>
-                    <li data-f="all">Все</li>
+                    <li data-f="all">
+                        <a href="{% url 'catalog' %}" >Все</a>
+                    </li>
                     {% for genre in genres%}
-                        <li data-f="{{ genre.name_in_english }}" class="text-{{ genre.name_in_english }}">{{ genre.name }}</li>
+                        <li data-f="{{ genre.name_in_english }}" class="text-{{ genre.name_in_english }}">
+                            <a href="{% url 'catalog_with_category' genre.id %}">{{ genre.name }}</a>
+                        </li>
                     {% endfor %}
                 </ul>
             </nav>
             <div class="block-cover flex-wrap d-flex justify-content-center" id="bookContainer">
+                {% for book in books %}
+                    <div class="col-auto box {% for genre in book.genre.all %}{{ genre.name }} {% endfor %} fade-in">
+                        <div class="frame col-4">
+                            <img class="catalog_img" src="{{ book.image_link }}">
+                            <p class="catalog_author">{{ book.author }}</p>
+                            <p class="catalog_bookname"><b>{{ book.title }}</b></p>
+                            <p class="book_year">{{ book.publication_date }}</p>
+                            <button class="catalog_button" onclick="goToPage('/book/{{ book.id }}/')">
+                                Перейти к книге
+                            </button>
+                        </div>
+                    </div>
+                {% endfor %}
 
                 <div class="col-auto box dramas fade-in">
                     <div class="frame col-4">

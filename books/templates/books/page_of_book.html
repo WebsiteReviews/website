@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<link>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Название книги</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/bootstrap.css" type="text/css"/>
+    <link rel="stylesheet" href="/static/css/layout.css"/>
+    <link rel="stylesheet" href="/static/css/page_of_book.css"/>
+    <script src="/static/javascript/page_of_book.js" defer></script>
+</head>
+<body>
+    <header id="header">
+        <div class="header container-fluid d-flex ">
+            <div class="container">
+                <div class="row d-flex align-items-center ">
+                    <nav class="d-flex align-items-center col-4">
+                        <img src="/static/img/Star 1.svg" class="logo-img">
+                        <a href="#" class="logo"><b>AboutBooooks</b></a>
+                    </nav>
+                    <nav class="d-flex align-items-center col-2 offset-6">
+                        <a href="#">
+                        <img src="/static/img/person-bounding-box.svg" class="profile-img">
+                        </a>
+                        <a href="enter_or_registration.html" class="my-profile"><b>Мой профиль</b></a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container-fluid page_of_book">
+        <div class="container d-flex align-items-center">
+            <div class="frame col-4">
+                <img class="catalog_img" src="{{ book.image_link }}">
+                <p class="catalog_author">{{ book.author }}</p>
+                <p class="catalog_bookname"><b>{{ book.title }}</b></p>
+                <p class="book_year">{{ book.publication_date }}</p>
+            </div>
+            <div class="discription col-8">
+                <p class="synopsis">Синопсис книги</p>
+                <p class="synopsis_text">{{ book.synonpis }}</p>
+                <p class="fragment">Фрагмент из книги</p>
+                <p class="fragmet_text">{{ book.excerpt }}</p>
+            </div>
+        </div>
+        <div class="container block_of_rewiews">
+            <div class="reviews-container">
+                <h2>Оставьте свою рецензию</h2>
+                <form id="review-form" class="justify-content-between d-flex">
+                    <textarea name="review" placeholder="Напишите вашу рецензию" class="text_of_rewiews col-11" required></textarea><br>
+                    <button type="submit" class="reviews-button">Отправить</button>
+                </form>
+                <h2>Все рецензии</h2>
+            </div>
+
+            <div class="reviews-container reviews-box" id="reviews-list">
+                <!-- Здесь будут отображаться отзывы -->
+            </div>
+        </div>
+    </main>
+
+    <footer class="container-fluid">
+        <div class="container">
+            <div class="row align-items-center">
+                <figure class="logo-figure col-4">
+                    <a href="#header">
+                        <img src="/static/img/Star 1.svg" alt="">
+                        <a href="#" class="logo_footer"><b>AboutBooooks</b></a>
+                    </a>
+                    <figcaption class="telephone">+7-987-654-3210</figcaption>
+                    <figcaption class="advertisement">Реклама на сайте</figcaption>
+                </figure>
+                <nav class="most-genre col-4" style="display: flex; flex-direction: column; align-items: center;">
+                    <a href="#" class="genre-title">Наиболее популярные жанры книг из каталога:</a>
+                    <a href="#" class="fantasy-footer d-block">Фентези</a>
+                    <a href="#" class="romans-footer d-block">Романы</a>
+                    <a href="#" class="dramas-footer d-block">Драмы</a>
+                </nav>
+                <nav class="social-network col-3 offset-1 d-flex justify-content-end align-items-center">
+                    <a href="#">
+                        <img src="/static/img/facebook.svg" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="/static/img/instagram.svg" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="/static/img/youtube.svg" alt="">
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

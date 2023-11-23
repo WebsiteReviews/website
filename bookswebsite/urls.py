@@ -16,11 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from books.views import main, catalog
+from books.views import main, catalog, page_of_book
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', main, name='main'),
     path('catalog/', catalog, name='catalog'),
+    path('catalog/<int:category_id>/', catalog, name='catalog_with_category'),
+    path('book/<int:book_id>/', page_of_book, name='page_of_book'),
     path('users/', include('users.urls', namespace='users')),
 ]

@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404, HttpResponseRedirect
-
+from django.urls import reverse
 from books.models import Book, Genres, Review
 from .forms import ReviewForm
 # Create your views here.
@@ -49,7 +49,7 @@ def page_of_book(request, book_id):
                 Review.objects.create(user=request.user, book=book, text=text)
                 return HttpResponseRedirect(request.path_info)
             else:
-                return HttpResponseRedirect('/enter_or_registration/')
+                return HttpResponseRedirect(reverse('users:enter_or_registration'))
 
     context = {
         'book': book,

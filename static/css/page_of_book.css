@@ -23,6 +23,9 @@
     font-size:30px;
     margin-top: 10px;
     color:#2C2D35;
+    overflow: hidden; /* обрезать текст, выходящий за границы блока */
+    text-overflow: ellipsis; /* отображать многоточие для обрезанного текста */
+    white-space: nowrap; /* предотвратить перенос текста на новую строку */
 }
 
 .book_year{

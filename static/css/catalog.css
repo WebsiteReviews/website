@@ -7,7 +7,12 @@
     border-radius: 50px;
     cursor: pointer;
 }
-
+.col-auto{
+    margin-top:50px;
+}
+.to-filter a {
+    color: black;
+}
 
 .to-filter ul li:hover {
     background-color: #97c0a8;
@@ -25,6 +30,7 @@ main{
     background-color: #E1EDE6;
     margin-right: 50px;
     transition: opacity 1s;
+    overflow: hidden; /* обрезать текст, выходящий за границы блока */
 }
 
 .catalog_img{
@@ -44,6 +50,9 @@ main{
     font-size:30px;
     margin-top: 10px;
     color:#2C2D35;
+    overflow: hidden; /* обрезать текст, выходящий за границы блока */
+    text-overflow: ellipsis; /* отображать многоточие для обрезанного текста */
+    white-space: nowrap; /* предотвратить перенос текста на новую строку */
 }
 
 .book_year{

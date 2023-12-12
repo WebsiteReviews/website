@@ -20,14 +20,26 @@
                 <div class="row d-flex align-items-center ">
                     <nav class="d-flex align-items-center col-4">
                         <img src="/static/img/Star 1.svg" class="logo-img">
-                        <a href="#" class="logo"><b>AboutBooooks</b></a>
+                        <a href="{% url 'main' %}" class="logo"><b>AboutBooooks</b></a>
                     </nav>
-                    <nav class="d-flex align-items-center col-2 offset-6">
-                        <a href="#">
-                        <img src="/static/img/person-bounding-box.svg" class="profile-img">
-                        </a>
-                        <a href="{% url 'users:profile' %}" class="my-profile"><b>Мой профиль</b></a>
-                    </nav>
+                    {% if user.is_authenticated %}
+                        <nav class="d-flex align-items-center col-2 offset-5">
+                            <a href="#">
+                            <img src="/static/img/person-bounding-box.svg" class="profile-img">
+                            </a>
+                            <a href="{% url 'users:profile' %}" class="my-profile"><b>Мой профиль</b></a>
+                        </nav>
+                        <nav class="d-flex align-items-center col-1">
+                            <a href="{% url 'users:logout' %}" class="my-profile"><b>Выйти</b></a>
+                        </nav>
+                    {% else %}
+                        <nav class="d-flex align-items-center col-2 offset-6">
+                            <a href="#">
+                            <img src="/static/img/person-bounding-box.svg" class="profile-img">
+                            </a>
+                            <a href="{% url 'users:enter_or_registration' %}" class="my-profile"><b>Войти</b></a>
+                        </nav>
+                    {% endif %}
                 </div>
             </div>
         </div>
@@ -89,25 +101,25 @@
                 <figure class="logo-figure col-4">
                     <a href="#header">
                         <img src="/static/img/Star 1.svg" alt="">
-                        <a href="#" class="logo_footer"><b>AboutBooooks</b></a>
+                        <a href="{% url 'main' %}" class="logo_footer"><b>AboutBooooks</b></a>
                     </a>
                     <figcaption class="telephone">+7-987-654-3210</figcaption>
                     <figcaption class="advertisement">Реклама на сайте</figcaption>
                 </figure>
                 <nav class="most-genre col-4" style="display: flex; flex-direction: column; align-items: center;">
                     <a href="#" class="genre-title">Наиболее популярные жанры книг из каталога:</a>
-                    <a href="#" class="fantasy-footer d-block">Фентези</a>
-                    <a href="#" class="romans-footer d-block">Романы</a>
-                    <a href="#" class="dramas-footer d-block">Драмы</a>
+                    <a href="{% url 'catalog' %}" class="fantasy-footer d-block">Фентези</a>
+                    <a href="{% url 'catalog' %}" class="romans-footer d-block">Романы</a>
+                    <a href="{% url 'catalog' %}" class="dramas-footer d-block">Драмы</a>
                 </nav>
                 <nav class="social-network col-3 offset-1 d-flex justify-content-end align-items-center">
-                    <a href="#">
+                    <a href="https://www.facebook.com">
                         <img src="/static/img/facebook.svg" alt="">
                     </a>
-                    <a href="#">
+                    <a href="https://www.instagram.com">
                         <img src="/static/img/instagram.svg" alt="">
                     </a>
-                    <a href="#">
+                    <a href="https://www.youtube.com/">
                         <img src="/static/img/youtube.svg" alt="">
                     </a>
                 </nav>

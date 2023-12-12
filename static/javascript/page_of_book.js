@@ -1,4 +1,4 @@
-document.getElementById('review-form').addEventListener('submit', function(event) {
+/*document.getElementById('review-form').addEventListener('submit', function(event) {
     event.preventDefault();
 
     var reviewText = this.querySelector('textarea').value;
@@ -11,4 +11,4 @@ document.getElementById('review-form').addEventListener('submit', function(event
     reviewsList.appendChild(reviewElement);
 
     this.reset(); // Очищаем форму
-});
+});*/

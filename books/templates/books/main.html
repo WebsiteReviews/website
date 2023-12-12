@@ -64,63 +64,19 @@
                 </div>
                 <div class="middle_page_catalog">
                     <div class="first_row col-12 row justify-content-between">
-                        <div class="frame col-4">
-                            <img class="catalog_img" src="/static/img/fate_of_human.jpg">
-                            <p class="catalog_author">М.А.Шолохов</p>
-                            <p class="catalog_bookname"><b>Судьба человека</b></p>
-                            <p class="book_year">1956 год</p>
-                            <button class="catalog_button" onclick="goToPage('page_of_book.html')">
-                                Перейти к книге
-                            </button>
-                        </div>
-                        <div class="frame col-4">
-                            <img class="catalog_img" src="/static/img/breathe_of_scandal.jpg">
-                            <p class="catalog_author">Элизабет Эссекс</p>
-                            <p class="catalog_bookname"><b>Дыхание скандала</b></p>
-                            <p class="book_year">2014 год</p>
-                            <button class="catalog_button" onclick="goToPage('#')">
-                                Перейти к книге
-                            </button>
-                        </div>
-                        <div class="frame col-4">
-                            <img class="catalog_img" src="/static/img/dungeon_island.jpg">
-                            <p class="catalog_author">Роберт Стивенсон</p>
-                            <p class="catalog_bookname"><b>Остров сокровищ</b></p>
-                            <p class="book_year">1883 год</p>
-                            <button class="catalog_button" onclick="goToPage('#')">
-                                Перейти к книге
-                            </button>
-                        </div>
-                    </div>
 
-                    <div class="second_row col-12 row justify-content-between">
-                        <div class="frame col-4">
-                            <img class="catalog_img" src="/static/img/davies_adventure.jpg">
-                            <p class="catalog_author">Александр Дюма</p>
-                            <p class="catalog_bookname" style="font-size:23px;"><b>Приключения Джона Девиса</b></p>
-                            <p class="book_year">2016 год</p>
-                            <button class="catalog_button" onclick="goToPage('#')">
-                                Перейти к книге
-                            </button>
-                        </div>
-                        <div class="frame col-4">
-                            <img class="catalog_img" src="/static/img/witcher.jpg">
-                            <p class="catalog_author">Анджей Сапковский</p>
-                            <p class="catalog_bookname"><b>Ведьмак</b></p>
-                            <p class="book_year">1956 год</p>
-                            <button class="catalog_button" onclick="goToPage('#')">
-                                Перейти к книге
-                            </button>
-                        </div>
-                        <div class="frame col-4">
-                            <img class="catalog_img" src="/static/img/war_and_piece.jpg">
-                            <p class="catalog_author">Л.Н.Толстой</p>
-                            <p class="catalog_bookname"><b>Война и мир</b></p>
-                            <p class="book_year">1869 год</p>
-                            <button class="catalog_button" onclick="goToPage('#')">
-                                Перейти к книге
-                            </button>
-                        </div>
+                        {% for book in six_books %}
+                            <div class="frame col-4" style="margin-top:50px;">
+                                <img class="catalog_img" src="{{ book.image_link }}">
+                                <p class="catalog_author">{{ book.author }}</p>
+                                <p class="catalog_bookname"><b>{{ book.title }}</b></p>
+                                <p class="book_year">{{ book.publication_date }}</p>
+                                <button class="catalog_button" onclick="goToPage('/book/{{ book.id }}/')">
+                                    Перейти к книге
+                                </button>
+                            </div>
+                        {% endfor %}
+
                     </div>
 
                 </div>
@@ -134,25 +90,25 @@
                 <figure class="logo-figure col-4">
                     <a href="#header">
                         <img src="/static/img/Star 1.svg" alt="">
-                        <a href="#" class="logo_footer"><b>AboutBooooks</b></a>
+                        <a href="{% url 'main' %}" class="logo_footer"><b>AboutBooooks</b></a>
                     </a>
                     <figcaption class="telephone">+7-987-654-3210</figcaption>
                     <figcaption class="advertisement">Реклама на сайте</figcaption>
                 </figure>
                 <nav class="most-genre col-4" style="display: flex; flex-direction: column; align-items: center;">
                     <a href="#" class="genre-title">Наиболее популярные жанры книг из каталога:</a>
-                    <a href="#" class="fantasy-footer d-block">Фентези</a>
-                    <a href="#" class="romans-footer d-block">Романы</a>
-                    <a href="#" class="dramas-footer d-block">Драмы</a>
+                    <a href="{% url 'catalog' %}" class="fantasy-footer d-block">Фентези</a>
+                    <a href="{% url 'catalog' %}" class="romans-footer d-block">Романы</a>
+                    <a href="{% url 'catalog' %}" class="dramas-footer d-block">Драмы</a>
                 </nav>
                 <nav class="social-network col-3 offset-1 d-flex justify-content-end align-items-center">
-                    <a href="#">
+                    <a href="https://www.facebook.com">
                         <img src="/static/img/facebook.svg" alt="">
                     </a>
-                    <a href="#">
+                    <a href="https://www.instagram.com">
                         <img src="/static/img/instagram.svg" alt="">
                     </a>
-                    <a href="#">
+                    <a href="https://www.youtube.com/">
                         <img src="/static/img/youtube.svg" alt="">
                     </a>
                 </nav>

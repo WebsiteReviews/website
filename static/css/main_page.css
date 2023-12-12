@@ -35,6 +35,10 @@
     background-color: #E1EDE6;
 }
 
+.middle_page_catalog .frame .col-4{
+    margin-top:50px;
+}
+
 .catalog_img{
     width: 310px;
     height: 422px;
@@ -52,6 +56,9 @@
     font-size:30px;
     margin-top: 10px;
     color:#2C2D35;
+    overflow: hidden; /* обрезать текст, выходящий за границы блока */
+    text-overflow: ellipsis; /* отображать многоточие для обрезанного текста */
+    white-space: nowrap; /* предотвратить перенос текста на новую строку */
 }
 
 .book_year{

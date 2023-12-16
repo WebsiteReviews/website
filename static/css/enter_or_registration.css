@@ -106,6 +106,7 @@ body.active{
 .form_signup{
     left:100%;
     transition-delay: 0s;
+
 }
 
 .form-box.active .form_signin{
@@ -151,3 +152,14 @@ body.active{
     background-color:#BD7F77;
 }
 
+.error-message{
+    font-size:13px;
+}
+
+.errorlist{
+    font-size:11px;
+}
+
+.hidden{
+    display:none;
+}

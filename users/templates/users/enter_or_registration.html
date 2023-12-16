@@ -29,6 +29,9 @@
             <form action="{% url 'users:enter_or_registration'%}" method="post" class="form form_signin">
                 <h3 class="form__title">Вход</h3>
                 {% csrf_token %}
+                {% if form1.errors %}
+                    <p class="error-message">Ошибка входа. Пожалуйста, проверьте правильность введенных данных.</p>
+                {% endif %}
                 <p>
                     {{form1.username}}
                 </p>
@@ -38,30 +41,43 @@
                 <p>
                     <button class="form__btn">Войти</button>
                 </p>
-                <p>
-                    <a href="#" class="form__forgot">Восстановить пароль</a>
-                </p>
             </form>
 
-            <form action="{% url 'users:enter_or_registration'%}" method="post" class="form form_signup">
+            <form action="{% url 'users:enter_or_registration'%}" method="post" class="form form_signup hidden">
                 <h3 class="form__title">Регистрация</h3>
                 {% csrf_token %}
+                {% if form2.errors %}
+                    <p class="error-message">Ошибка регистрации. Пожалуйста, проверьте правильность введенных данных.</p>
+                {% endif %}
 
                 <p>
                     {{ form2.username }}
+                    {% if form2.username.errors %}
+                        <span class="error">{{ form2.username.errors }}</span>
+                    {% endif %}
                 </p>
                 <p>
                     {{ form2.email }}
+                    {% if form2.email.errors %}
+                        <span class="error">{{ form2.email.errors }}</span>
+                    {% endif %}
                 </p>
                 <p>
                     {{ form2.password1 }}
+                    {% if form2.password1.errors %}
+                        <span class="error">{{ form2.password1.errors }}</span>
+                    {% endif %}
                 </p>
                 <p>
                     {{ form2.password2 }}
+                    {% if form2.password2.errors %}
+                        <span class="error">{{ form2.password2.errors }}</span>
+                    {% endif %}
                 </p>
                 <p>
                     <button class="form__btn form__btn_signup">Зарегистрироваться</button>
                 </p>
+
             </form>
 
         </div>

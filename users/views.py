@@ -17,6 +17,7 @@ def enter_or_registration(request):
             if user:
                 auth.login(request, user)
                 return HttpResponseRedirect(reverse('main'))
+
     else:
         form1 = UserLoginForm()
 

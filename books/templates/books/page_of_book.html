@@ -57,16 +57,21 @@
             </div>
         </div>
         <div class="container block_of_rewiews">
-            <div class="reviews-container">
-                <h2>Оставьте свою рецензию</h2>
-                <form id="review-form" class="justify-content-between d-flex" method="post" action="{% url 'page_of_book' book.id %}">
-                    {% csrf_token %}
-                    {{ review_form.review_text.errors }}
-                    {{ review_form.review_text }}
-                    <button type="submit" class="reviews-button">Отправить</button>
-                </form>
+            {% if user.is_authenticated %}
+                <div class="reviews-container">
+                    <h2>Оставьте свою рецензию</h2>
+                    <form id="review-form" class="justify-content-between d-flex" method="post" action="{% url 'page_of_book' book.id %}">
+                        {% csrf_token %}
+                        {{ review_form.review_text.errors }}
+                        {{ review_form.review_text }}
+                        <button type="submit" class="reviews-button">Отправить</button>
+                    </form>
+                </div>
+            {% else %}
+                <h2>Войдите, чтобы оставить свою рецензию</h2>
+            {% endif %}
                 <h2>Все рецензии</h2>
-            </div>
+
 
             <div class="reviews-container reviews-box" id="reviews-list">
                 <!-- Здесь будут отображаться отзывы -->

@@ -15,9 +15,13 @@
     color:#598D66;
     background-color: #E1EDE6 ;
     border-color: #86b090;
-    width: 225px;
-    height: 65px;
+    width: 290px;
+    height: 85px;
     cursor: pointer;
+}
+button.entry_button {
+    font-size: 20px;
+    color:black
 }
 
 .entry_button:hover{

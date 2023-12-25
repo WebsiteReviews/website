@@ -17,7 +17,9 @@
 .to-filter ul li:hover {
     background-color: #97c0a8;
 }
-
+li {
+    font-size: 18px;
+}
 main{
     margin-top:50px;
     margin-bottom: 50px;
